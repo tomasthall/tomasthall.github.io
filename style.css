@@ -1,0 +1,92 @@
+body {
+  margin: 0 auto;
+  padding: 0;
+  font-family: "Century Gothic";
+}
+
+section {
+  height: 100vh;
+  background-color: gray;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+section:nth-of-type(2n+1){
+  background-color: white;
+}
+
+.section-name {
+  margin-left: 20px;
+  margin-right: 20px;
+  width: 100%;
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.section-name h1 {
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+  float: left;
+}
+
+.section-name span {
+  float: right;
+  font-size: 40px;
+  font-weight: 900;
+}
+
+.section-name h1::before {
+  content: "";
+  width: 20px;
+  height: 3px;
+  position: absolute;
+  top: 65px;
+  left: 20px;
+  background: black;
+}
+
+.content {
+  width: 500px;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.round-content {
+  background: lightblue;
+  border-radius: 50%;
+}
+
+.round-content p {
+  font-weight: 300;
+}
+
+.square-content {
+  background: orange;
+}
+
+.bottom-of-section {
+  width: 100%;
+}
+
+.bottom-of-section .bottom-left-text {
+  margin-left: 20px;
+  text-align: left;
+  text-transform: lowercase;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.dots ul {
+  list-style-type: none;
+}
+
+.dots a {
+  background: black;
+
+}
