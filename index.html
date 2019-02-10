@@ -1,66 +1,58 @@
 <!DOCTYPE html>
 <html>
-  <head>
+<head>
     <meta charset="utf-8">
     <title>Portfolio</title>
     <link rel="stylesheet" href="style.css">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-  </head>
-  <body>
-    <header>
-      <!-- <h1>Section name</h1> -->
-    </header>
-    <section>
-      <div class="section-name"><h1>Section name</h1><span class="section-number">01</span></div>
-      <div class="round-content content">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<section class="section" id="section1">
+    <div class="section__name section__row">
+        <h1 class="section__title">Section name</h1>
+        <span class="section__number">01</span>
+    </div>
+    <div class="section__content section__content--round">
         <p>Some sample text that I made</p>
-      </div>
-      <div class="bottom-of-section">
-        <div class="bottom-left-text">Some text always on bottom left</div>
-        <div class="dots">
-          <ul>
-            <li class="dot"><a href=""></a></li>
-            <li class="dot"><a href=""></a></li>
-            <li class="dot"><a href=""></a></li>
-          </ul>
+    </div>
+    <div class="section__bottom section__row">
+        <div class="section__bottom--text">Some text always on bottom left</div>
+        <div class="section__bottom--nav">
+            <span onclick="nextSection()">&blacktriangleright;</span>
         </div>
-      </div>
-    </section>
-    <section>
-      <div class="section-name"><h1>Section name</h1><span class="section-number">02</span></div>
-      <div class="square-content content">
+    </div>
+</section>
+<section class="section" id="section2">
+    <div class="section__name section__row">
+        <h1 class="section__title">Section name</h1>
+        <span class="section__number">02</span>
+    </div>
+    <div class="section__content section__content--square">
         <p>Some sample text that I made</p>
-      </div>
-      <div class="bottom-of-section">
-        <div class="bottom-left-text">Some text always on bottom left</div>
-        <div class="dots">
-          <ul>
-            <li class="dot"><a href=""></a></li>
-            <li class="dot"><a href=""></a></li>
-            <li class="dot"><a href=""></a></li>
-          </ul>
+    </div>
+    <div class="section__bottom section__row">
+        <div class="section__bottom--text">Some text always on bottom left</div>
+        <div class="section__bottom--nav">
+            <span onclick="previousSection()">&blacktriangleleft;</span>
+            <span onclick="nextSection()">&blacktriangleright;</span>
         </div>
-      </div>
-    </section>
-    <section>
-      <div class="section-name"><h1>Section name</h1><span class="section-number">03</span></div>
-      <div class="round-content content">
+    </div>
+</section>
+<section class="section" id="section3">
+    <div class="section__name section__row">
+        <h1 class="section__title">Section name</h1>
+        <span class="section__number">03</span>
+    </div>
+    <div class="section__content section__content--round">
         <p>Some sample text that I made</p>
-      </div>
-      <div class="bottom-of-section">
-        <div class="bottom-left-text">Some text always on bottom left</div>
-        <div class="dots">
-          <ul>
-            <li class="dot"><a href=""></a></li>
-            <li class="dot"><a href=""></a></li>
-            <li class="dot"><a href=""></a></li>
-          </ul>
+    </div>
+    <div class="section__bottom section__row">
+        <div class="section__bottom--text">Some text always on bottom left</div>
+        <div class="section__bottom--nav">
+            <span onclick="previousSection()">&blacktriangleleft;</span>
         </div>
-      </div>
-    </section>
-    <footer>
-
-    </footer>
-    <script src="app.js"></script>
-  </body>
+    </div>
+</section>
+<script src="app.js"></script>
+</body>
 </html>
