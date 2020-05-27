@@ -1,43 +1,50 @@
 let sections = Array.prototype.slice.call(document.getElementsByClassName('section'));
 let currentPage = 1;
-sections.map(section => `section${currentPage}` !== section.id ? section.style.opacity = '0' : section.style.opacity = '1');
 
-sections.map((section, index) => {
-  section.style.zIndex = sections.length - index;
-});
-
-
-// TODO: Implement scroll
-// let isScrolling;
-//
-// window.onscroll = function (e) {
-//   console.log(this.oldScroll > this.scrollY);
-//   this.oldScroll = this.scrollY;
-// }
-
-window.addEventListener('keydown', (e)=> {
-  if(currentPage >= 1 && currentPage <= sections.length) {
-    if(e.keyCode == 37) {
-        previousSection();
-    }
-    if(e.keyCode == 39) {
-        nextSection();
-    }
-  };
-})
-
-function nextSection() {
-  if(currentPage < sections.length) {
-      currentPage++;
-      sections.map(section => `section${currentPage}` !== section.id ? section.style.opacity = '0' : section.style.opacity = '1');
-  }
+const setSectionStyle = (section, styleValue) => {
+    section.style.opacity = styleValue;
+    section.style.zIndex = styleValue;
 }
 
-// TODO: check why that stupid nav sucks balls
+const checkIfInfoModalShouldBeOpen = () => localStorage.getItem('infoOk') === 'ok';
 
-function previousSection() {
-  if(currentPage > 1) {
-      currentPage--;
-      sections.map(section => `section${currentPage}` !== section.id ? section.style.opacity = '0' : section.style.opacity = '1');
-  }
+if(!checkIfInfoModalShouldBeOpen()) document.getElementById('infoModal').style.display = 'flex';
+
+sections.map(section => `section${currentPage}` !== section.id ? setSectionStyle(section, '0') : setSectionStyle(section, '1'));
+sections.map((section, index) => {
+    section.style.zIndex = (sections.length - index).toString();
+});
+
+window.addEventListener('keydown', (e) => {
+    if(e.defaultPrevented) return;
+    if (currentPage >= 1 && currentPage <= sections.length) {
+        if (e.key === 'ArrowLeft') {
+            previousSection();
+        }
+        if (e.key === 'ArrowRight') {
+            nextSection();
+        }
+    }
+})
+
+const nextSection = () => {
+    if (currentPage < sections.length) {
+        currentPage++;
+        sections.map(section => `section${currentPage}` !== section.id ? setSectionStyle(section, '0') : setSectionStyle(section, '1'));
+    }
+}
+
+const previousSection = () => {
+    if (currentPage > 1) {
+        currentPage--;
+        sections.map(section => `section${currentPage}` !== section.id ? setSectionStyle(section, '0') : setSectionStyle(section, '1'));
+    }
+}
+
+const closeInfoModal = () => {
+    localStorage.setItem('infoOk', 'ok');
+    document.getElementById('infoModal').style.opacity = '0';
+    setTimeout(() => {
+        document.getElementById('infoModal').style.display = 'none';
+    }, 1000);
 }

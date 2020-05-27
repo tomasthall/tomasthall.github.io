@@ -1,0 +1,46 @@
+@import "../../styles/varibales";
+
+.info-modal {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+  transition: 1s all;
+
+  &__content {
+    width: 40vw;
+    height: 30vh;
+    background: $white;
+    border: 20px ridge $lightBlue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 20px;
+
+    &--text {
+      width: 100%;
+      margin-top: 2vh;
+      font-size: 0.9rem;
+    }
+
+    &--button {
+      padding: 6px 8px;
+      background: $lightBlue;
+      border: none;
+      color: $white;
+      cursor: pointer;
+      height: 50px;
+      width: 100px;
+      display: block;
+      transition: all 1s;
+      outline: none;
+      &:hover {
+        background: darken($lightBlue, 20%);
+      }
+    }
+  }
+}

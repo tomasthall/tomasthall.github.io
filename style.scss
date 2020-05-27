@@ -1,87 +1,9 @@
 @import "styles/varibales";
+@import "styles/infoModal/infoModal";
+@import "styles/section/section";
 
 body {
   margin: 0 auto;
   padding: 0;
   font-family: $centuryGothic;
-}
-
-.flex-center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-}
-
-.section {
-  height: 100vh;
-  width: 100vw;
-  background-color: $gray;
-  @extend .flex-center;
-  position: absolute;
-  transition: all 1s;
-
-  &:nth-of-type(2n+1) {
-    background-color: $white;
-  }
-
-  &__number {
-    font-size: 40px;
-    font-weight: 900;
-    line-height: 70px;
-  }
-
-  &__name {
-    font-weight: 700;
-    text-transform: uppercase;
-    &__title {
-      &:before {
-        content: "";
-        width: 20px;
-        height: 3px;
-        position: absolute;
-        top: 65px;
-        left: 20px;
-        background: black;
-      }
-    }
-  }
-
-  &__row {
-    margin: 0 20px;
-    width: 100%;
-    font-size: 16px;
-    display: flex;
-    justify-content: space-between;
-  }
-
-  &__content {
-    width: 50vh;
-    height: 50vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-weight: 300;
-    &--round {
-      background: lightblue;
-      border-radius: 50%;
-    }
-
-    &--square {
-      background: orange;
-    }
-  }
-
-  &__bottom {
-    &--text {
-      margin-left: 20px;
-      text-align: left;
-      text-transform: lowercase;
-      font-size: 14px;
-      font-weight: 600;
-    }
-    &--nav {
-      cursor: pointer;
-    }
-  }
 }

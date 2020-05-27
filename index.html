@@ -16,8 +16,12 @@
         <p>Some sample text that I made</p>
     </div>
     <div class="section__bottom section__row">
+        <div class="section__bottom--nav-mobile"></div>
         <div class="section__bottom--text">Some text always on bottom left</div>
         <div class="section__bottom--nav">
+            <span onclick="nextSection()">&blacktriangleright;</span>
+        </div>
+        <div class="section__bottom--nav-mobile">
             <span onclick="nextSection()">&blacktriangleright;</span>
         </div>
     </div>
@@ -31,9 +35,15 @@
         <p>Some sample text that I made</p>
     </div>
     <div class="section__bottom section__row">
+        <div class="section__bottom--nav-mobile">
+            <span onclick="previousSection()">&blacktriangleleft;</span>
+        </div>
         <div class="section__bottom--text">Some text always on bottom left</div>
         <div class="section__bottom--nav">
             <span onclick="previousSection()">&blacktriangleleft;</span>
+            <span onclick="nextSection()">&blacktriangleright;</span>
+        </div>
+        <div class="section__bottom--nav-mobile">
             <span onclick="nextSection()">&blacktriangleright;</span>
         </div>
     </div>
@@ -47,12 +57,27 @@
         <p>Some sample text that I made</p>
     </div>
     <div class="section__bottom section__row">
+        <div class="section__bottom--nav-mobile">
+            <span onclick="previousSection()">&blacktriangleleft;</span>
+        </div>
         <div class="section__bottom--text">Some text always on bottom left</div>
         <div class="section__bottom--nav">
             <span onclick="previousSection()">&blacktriangleleft;</span>
         </div>
+        <div class="section__bottom--nav-mobile"></div>
     </div>
 </section>
+<div class="info-modal" id="infoModal">
+    <div class="info-modal__content">
+        <p class="info-modal__content--text">
+            To move around this portfolio, use arrows at the bottom-right or left and right arrow on keyboard.
+        </p>
+        <button onClick="closeInfoModal()" class="info-modal__content--button">Ok.</button>
+    </div>
+</div>
+<div class="section-modal">
+
+</div>
 <script src="app.js"></script>
 </body>
 </html>
