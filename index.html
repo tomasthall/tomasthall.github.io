@@ -2,22 +2,28 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>Portfolio</title>
+    <title>Portfolio Mateusz Tomczyk</title>
     <link rel="stylesheet" href="style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
 <section class="section" id="section1">
     <div class="section__name section__row">
-        <h1 class="section__title">Section name</h1>
+        <h1 class="section__title">Hello_world</h1>
         <span class="section__number">01</span>
     </div>
     <div class="section__content section__content--round">
-        <p>Some sample text that I made</p>
+        <h1 class="section__content--heading">Hi, I'm Mateusz, pleased to meet you!</h1>
+        <img class="section__content--profile-image" src="./img/mateusz_tomczyk.jpg" alt="Mateusz Tomczyk - frontend developer">
+        <div class="section__content--profile-caption">I'm frontend developer, based in Cracow, Poland. Check my work experience and other cool stuff I do on the following pages.</div>
     </div>
     <div class="section__bottom section__row">
         <div class="section__bottom--nav-mobile"></div>
-        <div class="section__bottom--text">Some text always on bottom left</div>
+        <div class="section__bottom--text">
+            <span class="section__bottom--links section__bottom--links-round" onclick="changeCurrentPage(1)">hello_world</span> /
+            <span class="section__bottom--links section__bottom--links-round" onclick="changeCurrentPage(2)">experience</span> /
+            <span class="section__bottom--links section__bottom--links-round" onclick="changeCurrentPage(3)">contact</span>
+        </div>
         <div class="section__bottom--nav">
             <span onclick="nextSection()">&blacktriangleright;</span>
         </div>
@@ -38,7 +44,11 @@
         <div class="section__bottom--nav-mobile">
             <span onclick="previousSection()">&blacktriangleleft;</span>
         </div>
-        <div class="section__bottom--text">Some text always on bottom left</div>
+        <div class="section__bottom--text">
+            <span class="section__bottom--links section__bottom--links-square" onclick="changeCurrentPage(1)">hello_world</span> /
+            <span class="section__bottom--links section__bottom--links-square" onclick="changeCurrentPage(2)">experience</span> /
+            <span class="section__bottom--links section__bottom--links-square" onclick="changeCurrentPage(3)">contact</span>
+        </div>
         <div class="section__bottom--nav">
             <span onclick="previousSection()">&blacktriangleleft;</span>
             <span onclick="nextSection()">&blacktriangleright;</span>
@@ -50,17 +60,37 @@
 </section>
 <section class="section" id="section3">
     <div class="section__name section__row">
-        <h1 class="section__title">Section name</h1>
+        <h1 class="section__title">Contact</h1>
         <span class="section__number">03</span>
     </div>
     <div class="section__content section__content--round">
-        <p>Some sample text that I made</p>
+        <div>
+            <h1 class="section__content--heading">You can find me here:</h1>
+            <ul class="section__content--contact-list">
+                <li>
+                    <a href="https://www.linkedin.com/in/mateusz-tomczyk-aa21aa10b/" target="_blank" class="section__content--contact-list-link">LinkedIn</a>
+                </li>
+                <li>
+                    <a href="https://github.com/tomasthall" target="_blank" class="section__content--contact-list-link">github</a>
+                </li>
+                <li>
+                    <a href="https://soundcloud.com/mlemvivivi" target="_blank" class="section__content--contact-list-link">soundcloud</a>
+                </li>
+                <li>
+                    <a href="" target="_blank" class="section__content--contact-list-link"></a>
+                </li>
+            </ul>
+        </div>
     </div>
     <div class="section__bottom section__row">
         <div class="section__bottom--nav-mobile">
             <span onclick="previousSection()">&blacktriangleleft;</span>
         </div>
-        <div class="section__bottom--text">Some text always on bottom left</div>
+        <div class="section__bottom--text">
+            <span class="section__bottom--links section__bottom--links-round" onclick="changeCurrentPage(1)">hello_world</span> /
+            <span class="section__bottom--links section__bottom--links-round" onclick="changeCurrentPage(2)">experience</span> /
+            <span class="section__bottom--links section__bottom--links-round" onclick="changeCurrentPage(3)">contact</span>
+        </div>
         <div class="section__bottom--nav">
             <span onclick="previousSection()">&blacktriangleleft;</span>
         </div>

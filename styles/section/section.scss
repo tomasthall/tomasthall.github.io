@@ -56,7 +56,25 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
     font-weight: 300;
+
+    &--heading {
+      width: 15vh;
+      display: inline;
+    }
+
+    &--profile-image {
+      border-radius: 50%;
+      width: 20vh;
+      height: auto;
+      display: inline;
+    }
+
+    &--profile-caption {
+      width: 20vh;
+      margin-top: -10vh;
+    }
 
     &--round {
       background: $lightBlue;
@@ -65,6 +83,41 @@
 
     &--square {
       background: $orange;
+    }
+
+    &--contact-list {
+      display: block;
+      padding: 0;
+      list-style-type: none;
+      width: 40vh;
+      text-align: center;
+    }
+
+    &--contact-list-link {
+      color: $white;
+      text-decoration: none;
+
+      &:active {
+        color: $white;
+      }
+
+      &:focus {
+        color: $white;
+      }
+
+      &:visited {
+        color: $white;
+      }
+    }
+
+    @media (max-width: 767px) {
+      &--heading {
+        font-size: 1.2rem;
+      }
+
+      &--profile-caption {
+        font-size: 0.8rem
+      }
     }
   }
 
@@ -75,6 +128,23 @@
       text-transform: lowercase;
       font-size: 14px;
       font-weight: 600;
+    }
+
+    &--links {
+      transition: 1s all;
+      cursor: pointer;
+    }
+
+    &--links-square {
+      &:hover {
+        color: $orange;
+      }
+    }
+
+    &--links-round {
+      &:hover {
+        color: $lightBlue;
+      }
     }
 
     &--nav {

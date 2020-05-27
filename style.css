@@ -76,18 +76,57 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
     font-weight: 300; }
+    .section__content--heading {
+      width: 15vh;
+      display: inline; }
+    .section__content--profile-image {
+      border-radius: 50%;
+      width: 20vh;
+      height: auto;
+      display: inline; }
+    .section__content--profile-caption {
+      width: 20vh;
+      margin-top: -10vh; }
     .section__content--round {
       background: lightblue;
       border-radius: 50%; }
     .section__content--square {
       background: orange; }
+    .section__content--contact-list {
+      display: block;
+      padding: 0;
+      list-style-type: none;
+      width: 40vh;
+      text-align: center; }
+    .section__content--contact-list-link {
+      color: #fff;
+      text-decoration: none; }
+      .section__content--contact-list-link:active {
+        color: #fff; }
+      .section__content--contact-list-link:focus {
+        color: #fff; }
+      .section__content--contact-list-link:visited {
+        color: #fff; }
+    @media (max-width: 767px) {
+      .section__content--heading {
+        font-size: 1.2rem; }
+      .section__content--profile-caption {
+        font-size: 0.8rem; } }
   .section__bottom--text {
     margin-left: 20px;
     text-align: left;
     text-transform: lowercase;
     font-size: 14px;
     font-weight: 600; }
+  .section__bottom--links {
+    transition: 1s all;
+    cursor: pointer; }
+  .section__bottom--links-square:hover {
+    color: orange; }
+  .section__bottom--links-round:hover {
+    color: lightblue; }
   .section__bottom--nav {
     cursor: pointer;
     font-size: 2rem;

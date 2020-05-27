@@ -48,3 +48,8 @@ const closeInfoModal = () => {
         document.getElementById('infoModal').style.display = 'none';
     }, 1000);
 }
+
+const changeCurrentPage = page => {
+    currentPage = page;
+    sections.map(section => `section${currentPage}` !== section.id ? setSectionStyle(section, '0') : setSectionStyle(section, '1'));
+}
