@@ -1,0 +1,13 @@
+@import "../variables";
+@import "../../styles/mixins";
+
+.experience {
+  @include scrollbar(2px, $orange, $gray);
+  &__list {
+    padding: 0;
+    list-style-type: '- ';
+    &--element {
+
+    }
+  }
+}

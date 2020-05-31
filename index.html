@@ -15,14 +15,17 @@
     <div class="section__content section__content--round">
         <h1 class="section__content--heading">Hi, I'm Mateusz, pleased to meet you!</h1>
         <img class="section__content--profile-image" src="./img/mateusz_tomczyk.jpg" alt="Mateusz Tomczyk - frontend developer">
-        <div class="section__content--profile-caption">I'm frontend developer, based in Cracow, Poland. Check my work experience and other cool stuff I do on the following pages.</div>
+        <div class="section__content--profile-caption">I'm frontend developer, based in Cracow, Poland. Check my work experience and other cool
+            stuff I do on the following pages.</div>
     </div>
     <div class="section__bottom section__row">
         <div class="section__bottom--nav-mobile"></div>
         <div class="section__bottom--text">
             <span class="section__bottom--links section__bottom--links-round" onclick="changeCurrentPage(1)">hello_world</span> /
             <span class="section__bottom--links section__bottom--links-round" onclick="changeCurrentPage(2)">experience</span> /
-            <span class="section__bottom--links section__bottom--links-round" onclick="changeCurrentPage(3)">contact</span>
+            <span class="section__bottom--links section__bottom--links-round" onclick="changeCurrentPage(3)">skills</span> <span class="hidden-dash">/</span>
+            <span class="section__bottom--links section__bottom--links-round" onclick="changeCurrentPage(4)">other</span> /
+            <span class="section__bottom--links section__bottom--links-round" onclick="changeCurrentPage(5)">contact</span>
         </div>
         <div class="section__bottom--nav">
             <span onclick="nextSection()">&blacktriangleright;</span>
@@ -34,11 +37,27 @@
 </section>
 <section class="section" id="section2">
     <div class="section__name section__row">
-        <h1 class="section__title">Section name</h1>
+        <h1 class="section__title">Experience</h1>
         <span class="section__number">02</span>
     </div>
     <div class="section__content section__content--square">
-        <p>Some sample text that I made</p>
+        <div class="experience">
+            <h1>Work experience</h1>
+            <ul class="experience__list">
+                <li class="experience__list--element">
+                    <h4>Sabre, Cracow, Poland</h4>
+                </li>
+                <li class="experience__list--element">
+                    <h4>Bravelab, Cracow, Poland</h4>
+                </li>
+                <li class="experience__list--element">
+                    <h4>Evl.pl, Cracow, Poland</h4>
+                </li>
+                <li class="experience__list--element">
+                    <h4>Man la mode inc, Ann Arbor, USA(remotely)</h4>
+                </li>
+            </ul>
+        </div>
     </div>
     <div class="section__bottom section__row">
         <div class="section__bottom--nav-mobile">
@@ -47,7 +66,9 @@
         <div class="section__bottom--text">
             <span class="section__bottom--links section__bottom--links-square" onclick="changeCurrentPage(1)">hello_world</span> /
             <span class="section__bottom--links section__bottom--links-square" onclick="changeCurrentPage(2)">experience</span> /
-            <span class="section__bottom--links section__bottom--links-square" onclick="changeCurrentPage(3)">contact</span>
+            <span class="section__bottom--links section__bottom--links-square" onclick="changeCurrentPage(3)">skills</span> <span class="hidden-dash">/</span>
+            <span class="section__bottom--links section__bottom--links-square" onclick="changeCurrentPage(4)">other</span> /
+            <span class="section__bottom--links section__bottom--links-square" onclick="changeCurrentPage(5)">contact</span>
         </div>
         <div class="section__bottom--nav">
             <span onclick="previousSection()">&blacktriangleleft;</span>
@@ -60,26 +81,39 @@
 </section>
 <section class="section" id="section3">
     <div class="section__name section__row">
-        <h1 class="section__title">Contact</h1>
+        <h1 class="section__title">Skills</h1>
         <span class="section__number">03</span>
     </div>
     <div class="section__content section__content--round">
-        <div>
-            <h1 class="section__content--heading">You can find me here:</h1>
-            <ul class="section__content--contact-list">
-                <li>
-                    <a href="https://www.linkedin.com/in/mateusz-tomczyk-aa21aa10b/" target="_blank" class="section__content--contact-list-link">LinkedIn</a>
-                </li>
-                <li>
-                    <a href="https://github.com/tomasthall" target="_blank" class="section__content--contact-list-link">github</a>
-                </li>
-                <li>
-                    <a href="https://soundcloud.com/mlemvivivi" target="_blank" class="section__content--contact-list-link">soundcloud</a>
-                </li>
-                <li>
-                    <a href="" target="_blank" class="section__content--contact-list-link"></a>
-                </li>
-            </ul>
+        <div class="skills">
+            <h1 class="skills__heading"></h1>
+            <div class="skills__table">
+                <div class="skills__table--column">
+                    <strong>coding</strong>
+                    <ul class="skills__list">
+                        <li>html5</li>
+                        <li>css3</li>
+                        <li>js</li>
+                        <li>scs</li>
+                        <li>react</li>
+                        <li>redux</li>
+                        <li>typescript</li>
+                    </ul>
+                </div>
+                <div class="skills__table--column">
+                    <strong>other</strong>
+                    <ul class="skills__list">
+                        <li>git</li>
+                        <li>jest + enzyme</li>
+                        <li>problem solving</li>
+                        <li>web development</li>
+                        <li>web applications</li>
+                        <li>experience with
+                            jenkins and travis,
+                            used for CI</li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </div>
     <div class="section__bottom section__row">
@@ -89,7 +123,95 @@
         <div class="section__bottom--text">
             <span class="section__bottom--links section__bottom--links-round" onclick="changeCurrentPage(1)">hello_world</span> /
             <span class="section__bottom--links section__bottom--links-round" onclick="changeCurrentPage(2)">experience</span> /
-            <span class="section__bottom--links section__bottom--links-round" onclick="changeCurrentPage(3)">contact</span>
+            <span class="section__bottom--links section__bottom--links-round" onclick="changeCurrentPage(3)">skills</span> <span class="hidden-dash">/</span>
+            <span class="section__bottom--links section__bottom--links-round" onclick="changeCurrentPage(4)">other</span> /
+            <span class="section__bottom--links section__bottom--links-round" onclick="changeCurrentPage(5)">contact</span>
+        </div>
+        <div class="section__bottom--nav">
+            <span onclick="previousSection()">&blacktriangleleft;</span>
+            <span onclick="nextSection()">&blacktriangleright;</span>
+        </div>
+        <div class="section__bottom--nav-mobile">
+            <span onclick="nextSection()">&blacktriangleright;</span>
+        </div>
+    </div>
+</section>
+<section class="section" id="section4">
+    <div class="section__name section__row">
+        <h1 class="section__title">Other</h1>
+        <span class="section__number">04</span>
+    </div>
+    <div class="section__content section__content--square">
+        <div class="other">
+            <h1>Other stuff</h1>
+            <p>I also do some other stuff than coding, mostly music. Here are some links to my "tracks"</p>
+            <p><a href="https://t0m4s.bandcamp.com/" target="_blank" class="other__link">t0m4s</a> - my retrowave/synthwave project. I plan to continue it due to plans of creating small retro games.
+                <small>If you're interested in using some of these tracks in your projects, or need some retrowave/synthwave music, just let me know :)</small></p>
+            <p><a href="https://soundcloud.com/mateusz-tomas-tomczyk" target="_blank" class="other__link">soundcloud</a> - my 'main' soundcloud account, where all finished and unfinished projects land :D</p>
+            <p><a href="https://www.youtube.com/channel/UCNAF_nUVfkgsnCzESDyeY4Q" target="_blank" class="other__link">mlem</a> - my "sad" beats project. Here are the better ones.</p>
+            <p><a href="https://soundcloud.com/mlemvivivi" target="_blank" class="other__link">mlem's soundcloud</a> - soundcloud for "mlem" project, here are these all projcets, that in my honest opinion are not good enough to be put on youtube.</p>
+            <p>Few tracks from my albums were used in game that <a href="https://github.com/baransu" target="_blank" class="other__link">baransu</a> and I created during
+                <a href="https://ldjam.com/" target="_blank" class="other__link">ludum dare</a> game jam, back in 2015. I've also created graphic part for it, since I've been very interested in pixel art.
+                That COOL game can be found <a href="http://ludumdare.com/compo/ludum-dare-34/?action=preview&uid=61228" target="_blank" class="other__link">here</a> (mouse required).
+            </p>
+        </div>
+    </div>
+    <div class="section__bottom section__row">
+        <div class="section__bottom--nav-mobile">
+            <span onclick="previousSection()">&blacktriangleleft;</span>
+        </div>
+        <div class="section__bottom--text">
+            <span class="section__bottom--links section__bottom--links-square" onclick="changeCurrentPage(1)">hello_world</span> /
+            <span class="section__bottom--links section__bottom--links-square" onclick="changeCurrentPage(2)">experience</span> /
+            <span class="section__bottom--links section__bottom--links-square" onclick="changeCurrentPage(3)">skills</span> <span class="hidden-dash">/</span>
+            <span class="section__bottom--links section__bottom--links-square" onclick="changeCurrentPage(4)">other</span> /
+            <span class="section__bottom--links section__bottom--links-square" onclick="changeCurrentPage(5)">contact</span>
+        </div>
+        <div class="section__bottom--nav">
+            <span onclick="previousSection()">&blacktriangleleft;</span>
+            <span onclick="nextSection()">&blacktriangleright;</span>
+        </div>
+        <div class="section__bottom--nav-mobile">
+            <span onclick="nextSection()">&blacktriangleright;</span>
+        </div>
+    </div>
+</section>
+<section class="section" id="section5">
+    <div class="section__name section__row">
+        <h1 class="section__title">Contact</h1>
+        <span class="section__number">05</span>
+    </div>
+    <div class="section__content section__content--round">
+        <div class="contact">
+            <h1 class="contact__heading">You can find me here:</h1>
+            <ul class="contact__list">
+                <li>
+                    <a href="https://www.linkedin.com/in/mateusz-tomczyk-aa21aa10b/" target="_blank" class="contact__link">LinkedIn</a>
+                </li>
+                <li>
+                    <a href="https://github.com/tomasthall" target="_blank" class="contact__link">github</a>
+                </li>
+                <li class="contact__link">
+                    mateusztomczyk1996@gmail.com
+                </li>
+                send me an email :)
+            </ul>
+            <p>Also, here is my resume:</p>
+            <div>
+                <a href="./cv/CV_Mateusz_Tomczyk.pdf" download class="contact__link--download" target="_blank">CV_Mateusz_Tomczyk.pdf</a>
+            </div>
+        </div>
+    </div>
+    <div class="section__bottom section__row">
+        <div class="section__bottom--nav-mobile">
+            <span onclick="previousSection()">&blacktriangleleft;</span>
+        </div>
+        <div class="section__bottom--text">
+            <span class="section__bottom--links section__bottom--links-round" onclick="changeCurrentPage(1)">hello_world</span> /
+            <span class="section__bottom--links section__bottom--links-round" onclick="changeCurrentPage(2)">experience</span> /
+            <span class="section__bottom--links section__bottom--links-round" onclick="changeCurrentPage(3)">skills</span> <span class="hidden-dash">/</span>
+            <span class="section__bottom--links section__bottom--links-round" onclick="changeCurrentPage(4)">other</span> /
+            <span class="section__bottom--links section__bottom--links-round" onclick="changeCurrentPage(5)">contact</span>
         </div>
         <div class="section__bottom--nav">
             <span onclick="previousSection()">&blacktriangleleft;</span>
@@ -104,9 +226,6 @@
         </p>
         <button onClick="closeInfoModal()" class="info-modal__content--button">Ok.</button>
     </div>
-</div>
-<div class="section-modal">
-
 </div>
 <script src="app.js"></script>
 </body>

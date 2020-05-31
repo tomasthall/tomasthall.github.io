@@ -1,0 +1,31 @@
+@import "../variables";
+@import "../mixins";
+
+.contact {
+  text-align: center;
+  &__heading {
+    width: 15vh;
+    display: inline;
+  }
+
+  &__list {
+    display: block;
+    padding: 0;
+    list-style-type: none;
+    width: 40vh;
+    text-align: center;
+  }
+
+  &__link {
+    color: $white;
+    text-decoration: none;
+    @include sameColorForLink($white);
+
+    &--download {
+      color: $black;
+      text-decoration: none;
+      font-weight: 700;
+      @include sameColorForLink($black);
+    }
+  }
+}

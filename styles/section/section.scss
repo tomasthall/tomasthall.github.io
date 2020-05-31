@@ -1,4 +1,8 @@
-@import "../../styles/varibales";
+@import "../variables";
+@import "experience";
+@import "skills";
+@import "other";
+@import "contact";
 
 .flex-center {
   display: flex;
@@ -85,31 +89,6 @@
       background: $orange;
     }
 
-    &--contact-list {
-      display: block;
-      padding: 0;
-      list-style-type: none;
-      width: 40vh;
-      text-align: center;
-    }
-
-    &--contact-list-link {
-      color: $white;
-      text-decoration: none;
-
-      &:active {
-        color: $white;
-      }
-
-      &:focus {
-        color: $white;
-      }
-
-      &:visited {
-        color: $white;
-      }
-    }
-
     @media (max-width: 767px) {
       &--heading {
         font-size: 1.2rem;
@@ -150,19 +129,21 @@
     &--nav {
       cursor: pointer;
       font-size: 2rem;
-      line-height: 7px;
+      line-height: 16px;
     }
 
     &--nav-mobile {
       display: none;
       cursor: pointer;
       font-size: 2rem;
-      line-height: 7px;
+      line-height: 16px;
     }
 
     @media (max-width: 767px) {
       &--text {
         margin-left: 0;
+        text-align: center;
+        width: 250px;
       }
       &--nav {
         display: none;
@@ -170,6 +151,10 @@
       &--nav-mobile {
         display: block;
         width: 13px;
+      }
+
+      .hidden-dash {
+        display: none;
       }
     }
   }

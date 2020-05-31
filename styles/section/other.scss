@@ -1,0 +1,28 @@
+@import "../variables";
+@import "../../styles/mixins";
+
+.other {
+  max-height: 45vh;
+  overflow-y: scroll;
+  padding: 10px 20px;
+  @include scrollbar(3px, $gray, $orange);
+
+  &__link {
+    color: $black;
+    text-decoration: none;
+    font-weight: 700;
+
+    &:active {
+      color: $black;
+    }
+
+    &:focus {
+      color: $black;
+    }
+
+    &:visited {
+      color: $black;
+
+    }
+  }
+}

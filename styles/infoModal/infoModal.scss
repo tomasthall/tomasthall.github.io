@@ -1,4 +1,4 @@
-@import "../../styles/varibales";
+@import "../variables";
 
 .info-modal {
   position: absolute;
@@ -14,7 +14,7 @@
     width: 40vw;
     height: 30vh;
     background: $white;
-    border: 20px ridge $lightBlue;
+    border: 10px outset $lightBlue;
     display: flex;
     justify-content: center;
     align-items: center;
